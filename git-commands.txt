@@ -20,3 +20,6 @@ git push
 
 …to remove git remote origin 
 git remote rm origin
+
+…error: src refspec master does not match any. 
+git push origin HEAD:<remoteBranch> 
