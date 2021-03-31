@@ -1,0 +1,22 @@
+git init . 
+git add . 
+git commit -m "commit message"
+git branch -M main
+git remote add origin https://github.com/TechMyName/keeptime.git
+git push -u origin main
+
+
+…or push an existing repository from the command line
+git remote add origin https://github.com/TechMyName/PyBeginingProjects.git
+git branch -M main
+git push -u origin main
+
+…to pull changes 
+git pull origin main 
+
+…unable to send changes to the repo 
+git pull origin main --rebase 
+git push 
+
+…to remove git remote origin 
+git remote rm origin

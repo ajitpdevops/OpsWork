@@ -1,0 +1,15 @@
+Install pip3
+sudo apt-get -y install python3-pip
+
+--Linux 
+python3 -m pip install --user virtualenv
+Windows ->> py -m pip install --user virtualenv
+
+python3 -m venv venv
+py -m venv venv
+
+python -m pip install django
+Windows ->> py -m pip install Django
+
+pip freeze > requirements.txt
+pip install -r requirements.txt
