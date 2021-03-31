@@ -1,0 +1,65 @@
+Create an app ->>
+
+Settings.py in the project folder. 
+	
+
+urls.py
+	Go to the main project's urls.py file.
+	Add url pattern like below ->> 
+		path('agents/', include('leads.urls', namespace="agents")),	
+	 
+	create a new urls.py in the app folder, and add the following -
+		from django.urls import path, include
+		app_name = 'agents'
+		urlpatterns = []
+
+models.py 
+	Create a model within the app
+	Example model can be viewed here.
+	
+	from django.db import models
+	class Agent(models.Model):
+	    user = models.OneToOneField(User, on_delete=models.CASCADE)
+	    organization = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
+
+	    def __str__(self):
+		return self.user.email
+
+views.py 
+	create views. 
+	some common views are ->> 
+		list view
+		detail views 
+		CRUD 
+		django has templates for these views. And they can be imported form here ->
+			from django.views import generic
+
+		Example list view here. 
+
+	class AgentListView(LoginRequiredMixin, generic.ListView):
+	    template_name = "agents/agent_list.html"
+
+	    def get_queryset(self):
+		return Agent.objects.all()
+
+urls.py 
+	Create urlpattern in the app ->> 
+	
+	from django.urls import path
+	from .views import AgentListView
+
+	urlpatterns = [
+	    path('', AgentListView.as_view(), name='agent-list'),    
+	] 	
+	
+
+templates 
+	It is also important to create the HTML template with the name specified in the view.
+	In this case it is ->> agent_list.html
+	inside app create the following structure 
+	
+agents
+├── templates
+│   └── agents
+│       └── agent_list.html
+
