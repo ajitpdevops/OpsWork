@@ -1,0 +1,3 @@
+There is a reason to push your branch up to the remote repository,  that's where they run the Unit tests to ensure the code runs fine. 
+Once the code runs fine, that's when you will merge that code with the master. 
+ 
