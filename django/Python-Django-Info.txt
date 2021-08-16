@@ -1,0 +1,220 @@
+pip installation
+python libraries
+djnago library installation
+use Submline Text as an IDE
+refer to the - https://codingwithmitch.com/courses/building-a-website-django-python/
+
+
+
+
+
+Creating an App e.g. Personal
+	Mention the app in settings.py file. 
+	views.py -> 
+	There are various types of views can be created with Django. 
+	class based view, normal view etc.
+
+Create a templates folder under source directory
+	Templates is where all the html files are saved. 
+
+
+
+To-Do -->> 
+Python Django Tutorial 2020 - Full Course for Beginners
+https://www.youtube.com/watch?v=JT80XhYJdBw
+
+
+JQuery ->> 
+https://www.youtube.com/watch?v=3nrLc_JOF7k
+
+
+
+Model View Controller :
+Model ::: DB 
+View ::: 
+Template ::: Pages  
+
+1. Fast 
+2. Components 
+3. Security 
+4. Scalability 
+
+
+Install Python 
+Install PIP module (On Linux/Mac) as python comes preinstalled 
+Install IDE preferebly VS Code or PyCharm
+Define a directory where a project will be saved. 
+
+Create virtual Environment -> 
+
+Install Django 
+
+Start Project with Django 
+
+Create an App 
+
+---------------------------------------
+Very Important stuff 
+
+Materialize CSS by Google. 
+codepen.io flexbox 
+
+
+----------- xxxx ---------------
+
+##  https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment
+sudo apt install python3-pip        ## to install virtual pip  
+sudo apt install python3-venv       ## to install virtual environment 
+python3 -m venv apenv       ## to create a virtual env with the name apenv
+source apenv/bin/activate   ## to activate the virtual environment
+deactivate                  ## to leave the virtual environment
+pip install requests        ## install request packages 
+pip install django          ## install django 
+    django-admin help 
+    django-admin --version
+
+
+pip install -U pylint       ## install pylint on VSCode 
+
+django-admin startproject mysiteap      ## To start a new project named mysiteap 
+python manage.py runserver              ## To run the dev server 
+pip freeze > requirements.txt           ## To get all your requirements in a text file. 
+
+
+/polls/views.py 
+        def index(request):
+            return HttpResponse("Some Text") 
+
+Created a new file -> urls.py in polls directory 
+
+/polls/urls.py 
+        urlspatterns = [
+            path('', views.index, name='index') 
+
+/misiteap/urls.py 
+        add the following line int urlpatterns variable :
+        path('polls/' include('polls.urls'), 
+        
+polls/models.py 
+        create a model that can be mapped with the databaes.
+        E.g. 
+        class Question(models.Model):
+            question_text = models.CharField(max_length=200) 
+            pub_date = model.DateTimeField('date published') 
+
+mysiteap/settings.py
+        reqister the app by adding it to INSTALLED_APPS list 
+        'polls.apps.PollsConfig',
+        
+python manage.py makemigrations polls
+python manage.py sqlmigrate polls 0001
+python manage.py migrate
+
+Create a superuser 
+     python manage.py createsuperuser
+        provide username, email and password 
+
+to register a class/model in the admin panel edit polls/admin.py file 
+    from .models import Question
+    admin.site.register(Question) #Question class is imported from the Models 
+
+
+
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Django API: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+$ python manage.py shell 
+
+from polls.models import Choice, Question
+from django.utils import timezone 
+import datetime
+
+Question.object.all()
+q = Question(question_text='What is up?', pub_date=timzone.now())
+q.save()
+
+# create the following function in the polls/models.py file 
+# It returns boolean value after check if it was published yesterday. 
+import datetime 
+
+def was_recntly_published(self):
+    return self.pub_date = timezone.now() - datetime.timedelta(days=1)
+
+# restart shell -> python manage.py shell 
+
+Question.object.filter(question_text__startswith='What')
+Question.object.filter(question_text__contains='up')
+current_year = timezone.now().year
+Question.object.filter(pub_date__year=current_year) 
+
+
+Question.object.get(id=1)
+Question.object.get(id=2)  # Returns traceback error if there is no data. 
+Question.object.filter(id=2) # It throws blank if there is no data.. No error pops up. 
+q =  Question.object.get(id=1) 
+q.was_recntly_published() # This will return true if the condition matches else False. 
+
+q.choice_set.all() # choice_set is just like choices. That gives the related object set.
+q.choice_set.create(choice_text='Not much', votes=0)
+q.choice_set.create(choice_text='The Sky', votes=0)
+c = q.choice_set.create(choice_text='Just hacking again', votes=0) 
+c.question 
+
+q.choice_set.all()
+Choice.object.filter(question__pub_date__year=current_year) 
+
+polls/admin.py 
+from django.contrib import admin 
+from . models import Question 
+
+def AdminQuestion(admin.ModelAdmin):
+    model = Question
+    list_display = ('id', 'question_text', 'pub_date')
+
+admin.site.register(Question, AdminQuestion) 
+
+def index(request):
+    latest_questions_list = Questions.objects.order_by('-pub_date')[:5]
+    output = ', '.join([q.question_text for q in latest_questions_list])
+    return HttpResponse(output)
+
+
+
+# To add a Image field with Django 
+mysite/settings.py 
+specify the MEDIA_ROOT = os.join.path(BASE_DIR, 'static/uploads') 
+specify the image field in model class -> 
+profile_pic = models.ImageField()
+
+pip install Pillow 
+
+
+Mixins can be used to control the access 
+LoginRequiredMixin 
+You can create your own mixins 
+
+
+def get_form_kwargs(self):
+	Learn more about this method in the FormViews 
+
+
+------------------- resources and courses ----------------------------------
+## CRM Course -- 
+https://www.youtube.com/watch?v=xv_bwpA_aEA&list=PL-51WBLyFTg2vW-_6XBoUpE7vpmoR3ztO
+
+## DJ CRM 
+https://www.youtube.com/watch?v=fOukA4Qh9QA&t=19943s
+
+Image upload modelling with Django - 
+https://www.youtube.com/watch?v=aNk2CAkHvlE
+
+Extend Django's user model -> 
+https://simpleisbetterthancomplex.com/tutorial/2016/07/22/how-to-extend-django-user-model.html
+
+Using Chart.js with Django -> 
+https://simpleisbetterthancomplex.com/tutorial/2020/01/19/how-to-use-chart-js-with-django.html
+
