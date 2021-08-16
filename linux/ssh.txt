@@ -1,0 +1,2 @@
+Generating Your SSH Public Key ->. https://git-scm.com/book/en/v2/Git-on-the-Server-Generating-Your-SSH-Public-Key
+Generating a new SSH key and adding it to the ssh-agent ->> https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
