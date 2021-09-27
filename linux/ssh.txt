@@ -1,2 +1,50 @@
 Generating Your SSH Public Key ->. https://git-scm.com/book/en/v2/Git-on-the-Server-Generating-Your-SSH-Public-Key
 Generating a new SSH key and adding it to the ssh-agent ->> https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+
+Generating a new SSH key
+Open Git Bash.
+
+Paste the text below, substituting in your GitHub email address.
+
+$ ssh-keygen -t ed25519 -C "your_email@example.com"
+Note: If you are using a legacy system that doesn't support the Ed25519 algorithm, use:
+
+$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+This creates a new SSH key, using the provided email as a label.
+> Generating public/private ed25519 key pair.
+When you're prompted to "Enter a file in which to save the key," press Enter. This accepts the default file location.
+
+> Enter a file in which to save the key (/c/Users/you/.ssh/id_ed25519):[Press enter]
+At the prompt, type a secure passphrase. For more information, see "Working with SSH key passphrases."
+
+> Enter passphrase (empty for no passphrase): [Type a passphrase]
+> Enter same passphrase again: [Type passphrase again]
+
+
+## TESTING YOUR SSH CONNECTION 
+https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection
+
+Open TerminalTerminalGit Bash.
+
+Enter the following:
+
+$ ssh -T git@github.com
+# Attempts to ssh to GitHub
+You may see a warning like this:
+
+> The authenticity of host 'github.com (IP ADDRESS)' can't be established.
+> RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+> Are you sure you want to continue connecting (yes/no)?
+Verify that the fingerprint in the message you see matches GitHub's RSA public key fingerprint. If it does, then type yes:
+
+> Hi username! You've successfully authenticated, but GitHub does not
+> provide shell access.
+You may see this error message:
+
+...
+Agent admitted failure to sign using the key.
+debug1: No more authentication methods to try.
+Permission denied (publickey).
+This is a known problem with certain Linux distributions. For more information, see "Error: Agent admitted failure to sign".
+
+Verify that the resulting message contains your username. If you receive a "permission denied" message, see "Error: Permission denied (publickey)".
