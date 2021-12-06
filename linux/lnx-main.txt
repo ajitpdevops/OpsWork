@@ -3,11 +3,11 @@ cd
 pwd 
 cat 
 echo 
-man 
+man [man -k calendar or man -k *calendar*]
 exit 
 clear 
 $PATH
-$OLDPWD
+$OLDPWD [cd $OLDPWD]
 mkdir -p dir1/dir2/dir3
 rmdir  - Delets an empy dir
 rm -rf dir1  - Delete dir recursively 
@@ -28,50 +28,53 @@ tail -10 /var/log/yum.log
 yum history
 yum seach java
 yum search httpd
-
-
+rpm -qa | grep httpd
+ps -ef 
+w
+whoami
+whereis sshd
 
 
 Linux System administration Commands : 
 
 How to check the kernel version of a Linux system?
-uname -a [Everything about Kernel and OS ]
-Linux cryptomach 5.11.0-40-generic #44~20.04.2-Ubuntu SMP Tue Oct 26 18:07:44 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
+  uname -a [Everything about Kernel and OS ]
+  Linux cryptomach 5.11.0-40-generic #44~20.04.2-Ubuntu SMP Tue Oct 26 18:07:44 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
 
-uname -v [Kernel Version]
-#44~20.04.2-Ubuntu SMP Tue Oct 26 18:07:44 UTC 2021
+  uname -v [Kernel Version]
+  #44~20.04.2-Ubuntu SMP Tue Oct 26 18:07:44 UTC 2021
 
-uname -r [Kernel release]
-5.11.0-40-generic
+  uname -r [Kernel release]
+  5.11.0-40-generic
 
 How to see the current IP address on Linux?
-ifconfig 
-ip addr show 
-ip addr show wlp7s0
+  ifconfig 
+  ip addr show 
+  ip addr show wlp7s0
 
 How to check for free disk space in Linux?
-df -ah [df all file system and human readable ]
+  df -ah [df all file system and human readable ]
 
 How to see if a Linux service is running?
-systemctl status  
+  systemctl status  
 
 How to check the size of a directory in Linux?
-du -sh aws/
+  du -sh aws/
 
 How to check for open ports in Linux?
-sudo netstat -tulpn
-lsof -i
+  sudo netstat -tulpn
+  lsof -i
 
 How to check Linux process information (CPU usage, memory, user information, etc.)?
-ps aux | grep nginx 
-top 
-htop 
+  ps aux | grep nginx 
+  top 
+  htop 
 
 How to deal with mounts in Linux?
-mount /dev/sda2 /mnt  - To mount a drive 
-mount -> to see what's already mounted 
+  mount /dev/sda2 /mnt  - To mount a drive 
+  mount -> to see what's already mounted 
 
-less /etc/fstab - include amount on boot 
+  less /etc/fstab - include amount on boot 
 
 
 Linux Directory Structure 
