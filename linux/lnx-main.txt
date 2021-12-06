@@ -19,3 +19,66 @@ ls -R
 ls --color 
 tree -d 
 tree -C 
+cat> myfile.txt
+cat myfile.txt 
+yum repolist
+yum list installed
+yum grouplist
+tail -10 /var/log/yum.log
+yum history
+yum seach java
+yum search httpd
+
+
+
+
+Linux System administration Commands : 
+
+How to check the kernel version of a Linux system?
+uname -a [Everything about Kernel and OS ]
+Linux cryptomach 5.11.0-40-generic #44~20.04.2-Ubuntu SMP Tue Oct 26 18:07:44 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
+
+uname -v [Kernel Version]
+#44~20.04.2-Ubuntu SMP Tue Oct 26 18:07:44 UTC 2021
+
+uname -r [Kernel release]
+5.11.0-40-generic
+
+How to see the current IP address on Linux?
+ifconfig 
+ip addr show 
+ip addr show wlp7s0
+
+How to check for free disk space in Linux?
+df -ah [df all file system and human readable ]
+
+How to see if a Linux service is running?
+systemctl status  
+
+How to check the size of a directory in Linux?
+du -sh aws/
+
+How to check for open ports in Linux?
+sudo netstat -tulpn
+lsof -i
+
+How to check Linux process information (CPU usage, memory, user information, etc.)?
+ps aux | grep nginx 
+top 
+htop 
+
+How to deal with mounts in Linux?
+mount /dev/sda2 /mnt  - To mount a drive 
+mount -> to see what's already mounted 
+
+less /etc/fstab - include amount on boot 
+
+
+Linux Directory Structure 
+
+					    / 	(ROOT)	
+                            |
+home 	etc 	var 	usr 	bin 	dev 	sys     tmp     proc    root    sbin
+  |	  	|	  	|   	|    	|   	|   	|       |       |       |       |
+  
+  
