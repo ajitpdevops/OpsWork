@@ -31,8 +31,9 @@ Remove files:
 Committing:
 	git commit -m "This is the commit message" - -m is used to add message
 	
-Check log:
-	git log - renders commit ids, authors, dates
+# Check log:
+	git log => renders commit ids, authors, dates
+	got log --oneline => renders only first line for each commit 
 	
 Clone a remote repo:
 	git clone <url> <where to clone>
@@ -71,7 +72,15 @@ Delete a branch:
 	git branch -a - check the repo branches 
 	git push origin --delete <name of the branch> - this deletes it from the repo!
 
+Revert changes 
+	Before Staging 
+		- git checkout index.html => [File that is being reverted, it will fetch the file from repo]
+	After Staging 
+		- git reset HEAD index.html  => This will only revert the changes in staging 
+		- git checkout index.html 
 
+Secret Directory 
+	.git 
 
 =================== old notes ================================
 git init .
@@ -84,6 +93,10 @@ git push -u origin main
 
 …or push an existing repository from the command line
 git remote add origin https://github.com/TechMyName/PyBeginingProjects.git
+
+# add remote origin using ssh 
+git remote add origin git@github.com:whoajitpatil/java-project.git
+
 git branch -M main
 git push -u origin main
 
