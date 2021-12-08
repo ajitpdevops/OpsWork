@@ -1,0 +1,9 @@
+Linux Monitoring with Prometheus and Grafana 
+https://www.youtube.com/watch?v=7KxVSK9yP-Y
+
+Python Microservices Web App (with React, Django, Flask) - Full Course
+https://www.youtube.com/watch?v=0iB5IPoTDts 
+
+Docker and Docker-Compose with Python Django 
+https://www.youtube.com/watch?v=aMqs_y6dZw4&list=PLOLrQ9Pn6cazCfL7v4CdaykNoWMQymM_C&index=2
+	
