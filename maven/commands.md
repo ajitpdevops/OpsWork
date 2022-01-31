@@ -13,6 +13,9 @@ mvn install
 # Run app from the jar 
 java -cp target/hellomaven-1.0-SNAPSHOT.jar com.ajit.App    
 
+# clean install 
+mvn clean install 
+
 # Create a Java standalone Project [.jar packaging]
 mvn archetype:generate -DgroupId=com.ajit -DartifactId=java-project -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
 # Create a Java Web Project [.war packaging]

@@ -106,23 +106,20 @@ f79364e0e61516233e2bedcb422e235facf0eb659e02d49ad6a466cf113f5693
 Total reclaimed space: 310B
 
 
-# Creating a image through dockerfile. 
+## Creating a image through dockerfile. 
 sudo nano Dockerfile
 You will also need your compiled binarys. In my case it a GOLang binary named "hello" 
 
-
-# Create a Docker image and Run a program 
+## Create a Docker image and Run a program 
 docker run . 
 
-# Creates and image with the name greeting 
+## Creates and image with the name greeting 
 docker run -t greeting . 
 
 cat /var/lib/docker/image/overlay2/imagedb/content/sha256/2712cb1afca47f896dc6adaaf391e82a356aacd0d783e30fcc0f0829a354eb28  | python3 -m json.tool 
 
-
-# Create an image based on the existing image/container 
-# install python3 on the existing ubuntu image and save that images as ubuntu_python
-
+## Create an image based on the existing image/container 
+- install python3 on the existing ubuntu image and save that images as ubuntu_python
 docker run -it ubuntu /bin/bash
 
 Run following commads to install python3 in the docker image 

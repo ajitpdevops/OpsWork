@@ -1,4 +1,5 @@
 start-transcript 
+
 get-history 
 
 Get-Command
@@ -60,14 +61,14 @@ Get-ChildItem -Path $path -Recurse -Force | Where-Object { !$_.PSIsContainer -an
 =====================================================================================================
 $dir = Get-ChildItem | ?{ $_.PSIsContainer } 
 $datadir = Join-Path -path $dir -ChildPath data
-$mydir = gci $datadir -Directory | Where-Object {$_.Name -like "*db"} | Select Name, FullName
+$mydir = gci $datadir -Directory | Where-Object {$_.Name -like "*db"} | Select-Object Name, FullName
 
 $mydir | ForEach-Object { $_.Name } | out-file H:\idnajp\auto\db_name.csv
-$mydir | ForEach-Object { (gci -path $_.FullName propertybardecisionsandoverridespace.*  | Measure-Object Length -s).SUM /1mb } | out-file H:\idnajp\auto\table.csv
+$mydir | ForEach-Object { (Get-ChildItem -path $_.FullName propertybardecisionsandoverridespace.*  | Measure-Object Length -s).SUM /1mb } | out-file H:\idnajp\auto\table.csv
 
-H:\idnajp\auto\tablesize.ps1
+# H:\idnajp\auto\tablesize.ps1
 
 ======================================================================================================
-Get-Service tomcat_* | where { $_.status -eq "stopped" } | select -First 3 | Start-Service
+Get-Service tomcat_* | Where-Object { $_.status -eq "stopped" } | Select-Object -First 3 | Start-Service
 
 ======================================================================================================

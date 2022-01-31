@@ -4,7 +4,7 @@
                             |
 home 	etc 	var 	usr 	bin 	dev 	sys     tmp     proc    root    sbin
   |	  	|	  	|   	|    	|   	|   	|       |       |       |       |
-  
+
   
 	/ 		"Root"
 	/bin 	Binaries and other executable programs 
@@ -25,42 +25,43 @@ home 	etc 	var 	usr 	bin 	dev 	sys     tmp     proc    root    sbin
 	/selinux 
 
 ## Commands
-ls 
-cd 
-pwd 
-cat 
-echo 
-man [man -k calendar or man -k *calendar*]
-exit 
-clear 
-$PATH
-$OLDPWD [cd $OLDPWD]
-mkdir -p dir1/dir2/dir3
-rmdir  - Delets an empy dir
-rm -rf dir1  - Delete dir recursively 
-ls -F list content by types / - dir @ - Link * executeables 
-ls -t -> List files by time 
-ls -r -> Reverse order 
-ls -latr -> Long listing including all files in sorted by time in Descending order 
-ls -R 
-ls --color 
-tree -d 
-tree -C 
-cat> myfile.txt
-cat myfile.txt 
-yum repolist
-yum list installed
-yum grouplist
-tail -10 /var/log/yum.log
-yum history
-yum seach java
-yum search httpd
-rpm -qa | grep httpd
-ps -ef 
+- ls 
+- cd 
+- pwd 
+- cat 
+- echo 
+- man [man -k calendar or man -k *calendar*]
+- exit 
+- clear 
+- $PATH
+- $OLDPWD [cd $OLDPWD]
+- mkdir -p dir1/dir2/dir3
+- rmdir  - Delets an empy dir
+- rm -rf dir1  - Delete dir recursively 
+- ls -F list content by types / - dir @ - Link * executeables 
+- ls -t -> List files by time 
+- ls -r -> Reverse order 
+- ls -latr -> Long listing including all files in sorted by time in Descending order 
+- ls -R 
+- ls --color 
+- tree -d 
+- tree -C 
+- cat> myfile.txt
+- cat myfile.txt 
+- yum repolist
+- yum list installed
+- yum grouplist
+- tail -10 /var/log/yum.log
+- yum history
+- yum seach java
+- yum search httpd
+- rpm -qa | grep httpd
+- ps -ef 
 - w
 - whoami
 - whereis sshd
 - chgrp wheel sales.data => Change group of a file 
+
 
 # Linux System administration Commands : 
 
@@ -115,9 +116,9 @@ ps -ef
 - umask -S
 
 ## Find Commands 
--	find / -size +100M
--	find /sbin -mtime +10 -mtime -13
--	find -name s* -ls
+- find / -size +100M
+- find /sbin -mtime +10 -mtime -13
+- find -name s* -ls
 - find . -type d -newer test.txt
 - find . -exec file {} \;
 - find /lib/modules/$(uname -r) -type f -iname "*.ko"
@@ -133,3 +134,13 @@ ps -ef
 - sudo amazon-linux-extras install epel -y 
 - sudo yum install stress -y
 - stress -c 4 
+
+### glossary 
+Remote Repo 
+Clone 
+Local Repo 
+Staging Area 
+Pull / Push 
+Add / Commit 
+Work area 
+HEAD will always point to the latest commit 
