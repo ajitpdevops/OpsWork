@@ -1,0 +1,48 @@
+# Minikube important
+minikube start 
+minikube start --vm-driver=none
+minikube status
+sudo chown -R $USER $HOME/.minikube; chmod -R u+wrx $HOME/.minikube'
+
+
+# kubectl commands 
+kubectl create -f <file_name>
+minikube status
+kubectl create -f 1.1-basic_pod.yaml
+kubectl get po
+kubectl get po,svc
+kubectl get po
+kubectl describe pod | more
+kubectl delete pod mypod
+kubectl delete -f 1.1-basic_pod.yaml
+
+kubectl create -f 2.1-namespaces.yaml 
+kubectl get namespaces
+kubectl get namespace
+kubectl get ns
+
+kubectl create -f 2.2-multicontainer_pod.yaml -n microservice
+kubectl describe namespace microservice
+kubectl describe -n microservice pod
+
+kubectl logs -n microservice app-pod counter --tail 10
+kubectl logs -n microservice app-pod poller -f
+
+
+QoS Class: BestEffort / Guaranteed
+
+Pods - 
+Services -
+- Services expose pod via a static IP address 
+- NodePort services allow access from outside the cluster
+
+Multicontainer Pods -
+- 
+
+Namespaces 
+- Namespaces isolate resources according to users, environments or applications 
+- Role based access control to secure access per Namespace
+- Using Namespace is a best practice 
+- 
+
+pod Logs
