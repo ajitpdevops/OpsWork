@@ -1,9 +1,7 @@
 # Minikube important
-
 minikube start 
 minikube start --vm-driver=none
 minikube status
-
 sudo chown -R $USER $HOME/.minikube; chmod -R u+wrx $HOME/.minikube'
 
 
@@ -31,8 +29,6 @@ kubectl logs -n microservice app-pod counter --tail 10
 kubectl logs -n microservice app-pod poller -f
 
 
-
-
 QoS Class: BestEffort / Guaranteed
 
 Pods - 
@@ -50,4 +46,3 @@ Namespaces
 - 
 
 pod Logs
-
