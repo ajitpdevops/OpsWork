@@ -24,6 +24,19 @@ home 	etc 	var 	usr 	bin 	dev 	sys     tmp     proc    root    sbin
 	/sbin 
 	/selinux 
 
+================================================
+Home Directories: /root, /home/username 
+User Executables: /bin, /usr/bin, /usr/local/bin
+System Executables: /sbin, /usr/sbin, /usr/local/sbin 
+Other Mountpoints: /media, /mnt
+Configurations: /etc 
+Temp Files: /tmp 
+Kernels and Bootloader: /boot 
+Server Data: /var, /srv 
+System Information: /proc, /sys 
+Shared Libraries: /lib, /usr/lib, /usr/local/lib
+
+
 ## Commands
 - ls 
 - cd 
@@ -32,7 +45,13 @@ home 	etc 	var 	usr 	bin 	dev 	sys     tmp     proc    root    sbin
 - echo 
 - man [man -k calendar or man -k *calendar*]
 - exit 
-- clear 
+- cp : copy files 
+- cp -r : to copy dir 
+- mv
+- mv *.txt textdir/ 
+- rm 
+- rm -r
+- clear : Ctrl + L clear screen 
 - $PATH
 - $OLDPWD [cd $OLDPWD]
 - mkdir -p dir1/dir2/dir3
