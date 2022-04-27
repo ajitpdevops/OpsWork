@@ -1,0 +1,3 @@
+isql -v -k "driver={ODBC Driver 17 for SQL Server}; server=lidnacjina6.apac.sas.com;uid=sa;pwd=<password>;database=011032;port=1433;TrustServerCertificate=yes" multi_datasrc_opt=in_clause schema=dbo ignore_read_only_columns=yes dbcommit=8192 connection=global dbmstemp=yes INSERTBUFF=32767 READBUFF=32767;
+
+sqlcmd -s lidnacjina6.apac.sas.com -U sa -P <password>

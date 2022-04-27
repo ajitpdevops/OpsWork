@@ -1,0 +1,19 @@
+db.getCollection("nucleusStatisticsCorrelation").update(
+{
+  "clientCode" : "ATPM",
+  "propertyCode" : "0013",
+  "_id" :ObjectId("5fdbe22157cea270472071c2")
+},
+  {
+    $set: {
+      "isBde":"true",
+    }
+  }
+)
+
+db.getCollection("nucleusVendorConfigParams").update(
+{ "_id": "HostPMS", $and: [ { "chains.0.chainCode": "2533 " } ] }, {}).sort({})
+
+db.getCollection("nucleusStatisticsCorrelation").updateMany({"clientCode" : "WESTMONT","propertyCode" : "0001","fiscalDate": {$gt: "2020-12-01"}},{$set:{status:"COMPLETE"}});
+
+db.getCollection("nucleusStatisticsCorrelation").find({ "clientCode" : "WESTMONT"});

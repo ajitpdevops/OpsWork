@@ -1,0 +1,13 @@
+---------------- JAVA Utilies  [heap dump | thread dump] ----------------------------------------
+
+Both JMAP and JSTACK Utilities are located under -> 
+d:\Programs\java-1.8.0_40-x64\bin\
+
+jstack -F 7240 > d:\temp\threaddump_jui02_2010.txt
+
+jmap -F -dump:live,format=b,file=D:/temp/dump_jui02.hprof 7240
+jmap -F -dump:live,format=b,file=C:/temp/dump_.hprof 18936
+jmap -dump:format=b,file=<D:programs/FILENAME>.hprof 5052
+
+service:jmx:http-remoting-jmx://localhost:9990
+-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005

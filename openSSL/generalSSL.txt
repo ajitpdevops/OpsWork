@@ -1,0 +1,4 @@
+openssl s_client -connect 172.19.107.161:23005 -tls1 	
+openssl s_client -connect 172.19.107.161:23005 -tls1_1
+openssl s_client -connect 172.19.107.161:23005 -tls1_2
+openssl s_client -connect 172.19.107.161:23005 -tls1_3 	
