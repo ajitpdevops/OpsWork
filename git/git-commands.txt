@@ -113,3 +113,13 @@ git remote rm origin
 …error: src refspec master does not match any.
 git push origin HEAD:<remoteBranch>
 
+
+### glossary 
+Remote Repo 
+Clone 
+Local Repo 
+Staging Area 
+Pull / Push 
+Add / Commit 
+Work area 
+HEAD will always point to the latest commit 

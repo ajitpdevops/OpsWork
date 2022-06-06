@@ -80,7 +80,7 @@ Shared Libraries: /lib, /usr/lib, /usr/local/lib
 - whoami
 - whereis sshd
 - chgrp wheel sales.data => Change group of a file 
-
+- yum list installed
 
 # Linux System administration Commands : 
 
@@ -154,12 +154,9 @@ Shared Libraries: /lib, /usr/lib, /usr/local/lib
 - sudo yum install stress -y
 - stress -c 4 
 
-### glossary 
-Remote Repo 
-Clone 
-Local Repo 
-Staging Area 
-Pull / Push 
-Add / Commit 
-Work area 
-HEAD will always point to the latest commit 
+## Repository
+cd /etc/yum.repos.d
+ls 
+
+
+
