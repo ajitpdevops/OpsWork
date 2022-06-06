@@ -1,0 +1,87 @@
+Designing the ansible playbook
+
+Ansible Engine 
+Playbooks 
+Handy modules | Own modules 
+============================================
+Linux Funadamental 
+Bash / python scripting 
+Cloud 
+Terraform Concepts 
+================================================
+Custom module using python/shell scripting (Python gives more flexibility)
+Automate redudant tasks. 
+- Configuration Management 
+- Application Deployment 
+- Task Automation e.g. Patch 
+- Infra Orchastration
+
+
+
+1. Verify Python3 is installed.
+
+python3 --version
+apt install python3-pip
+
+2. If Missing Install python3
+
+sudo apt update
+sudo apt install software-properties-common
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt update
+sudo apt install python3.8
+sudo apt install python3-pip
+python3 --version
+
+
+3. Install Dependencies
+
+sudo apt-get install python3-minimal python3-virtualenv python3-dev build-essential
+
+
+
+4. Set up virtualenv
+
+mkdir ansible
+cd ansible
+virtualenv myansible
+
+
+5. Activate Virtual Env
+
+source myansible/bin/activate
+
+
+
+6. Install Ansible
+pip3 install ansible
+
+
+
+7. Verify Ansible version
+ansible --version
+
+
+ansible all -m ping
+ansible all -m shell -a "free -m"
+ansible all -m shell -a "uptime"
+ansible all -m shell -a "yum list installed | grep perl"
+ansible-doc -l > ansible_module.txt
+ansible-doc -l | wc -l
+cat ansible_module.txt | grep aws
+ANSIBLE_KEEP_REMOTE_FILES=1 ansible all -m shell -a "uptime"
+nano ansible_test.txt
+ansible all -m copy -a "src=/home/crypto/repos/ansible/ansible_test.txt dest=/tmp/"
+ansible all -m copy -a "src=/home/crypto/repos/ansible/ansible_test.txt dest=/tmp/"
+vi ansible_test.txt
+ansible all -m copy -a "src=/home/crypto/repos/ansible/ansible_test.txt dest=/tmp/"
+ansible all -m copy -a "content='This is Ajit' dest=/tmp/temp.txt"
+ansible all -m file -a "path=/tmp/tmp_test.py state=touch mode=0775"
+ansible all -m file -a "path=/tmp/tmp_test.py state=absent"
+ansible all -m file -a "src=/tmp/temp/test_dir state=directory"
+ansible all -m file -a "path=/tmp/temp/test_dir state=directory"
+ansible all -m yum -a "name=perl state=present"
+ansible all -m yum -a "name=git state=present"
+ansible all -m yum -a "name=git state=present" -b
+ansible all -m yum -a "name=git state=latest" -b
+  

@@ -1,0 +1,73 @@
+wget https://apt.puppet.com/puppet7-release-focal.deb
+sudo dpkg -i puppet7-release-focal.deb
+apt-get update
+apt-get install puppetserver
+
+vi /etc/default/puppetserver
+	to adjust the memory settings 
+	
+vi /etc/hosts
+	127.0.0.1       puppet.test.vm puppet localhost
+vi /etc/hostname 
+	puppet.test.vm 
+
+hostname puppet.test.vm
+service puppetserver restart
+export PATH=/opt/puppetlabs/bin:$PATH
+which puppet
+puppet resource service puppetserver ensure=running enable=true
+	puppetserver is started and enabled
+puppet resource service puppet ensure=stopped enable=false
+	stops puppet agent and wont start when rebooted 
+	
+	
+sp_who2
+job activity monitor 
+event viewer 
+MSDTC Error 
+
+
+Cent OS 
+
+sudo -i 
+
+cd /etc/yum.repos.d
+ls 
+
+
+https://yum.puppetlabs.com/puppetlabs-release-pc1-el-7.noarch.rpm
+https://yum.puppet.com/puppet7-release-el-8.noarch.rpm
+
+Idempotency 
+RAL (Resource Abstraction Layer) 
+	We declare the WHAT and the RAL decides the HOW 
+
+	Resources Types -> Providers -> 
+		Eg 	R Type = Package 
+			provider = yum or apt 
+
+	puppet resources user bob
+	puppet describe user |more
+	
+	#Idempotency : Notice the output when you run this command twice
+	puppet resource user bob ensure=present uid=9999
+	puppet resource user bob ensure=present uid=9999
+	
+	puppet resources user bob
+	
+	puppet resource group sysadmins
+	puppet resource group sysadmins ensure=present
+	
+	puppet resource user bob ensure=present groups=sysadmins
+	
+	puppet config print
+	
+	puppet config print | grep modulepath
+	
+	grep bob /etc/passwd
+	grep bob /etc/group
+	grep sysadmins /etc/group
+	userdel bob 
+	
+	
+	
