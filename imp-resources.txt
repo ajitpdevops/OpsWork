@@ -10,3 +10,8 @@ https://www.youtube.com/watch?v=0iB5IPoTDts
 Docker and Docker-Compose with Python Django 
 https://www.youtube.com/watch?v=aMqs_y6dZw4&list=PLOLrQ9Pn6cazCfL7v4CdaykNoWMQymM_C&index=2
 
+Building container from scratch in GO :- 
+https://www.youtube.com/watch?v=Utf-A4rODH8
+
+Reminder App CLI 
+https://www.youtube.com/watch?v=PbKCvQuAPIQ

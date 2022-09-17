@@ -20,14 +20,6 @@ puppet resource service puppetserver ensure=running enable=true
 puppet resource service puppet ensure=stopped enable=false
 	stops puppet agent and wont start when rebooted 
 	
-	
-sp_who2
-job activity monitor 
-event viewer 
-MSDTC Error 
-
-
-Cent OS 
 
 sudo -i 
 
@@ -60,10 +52,23 @@ RAL (Resource Abstraction Layer)
 	
 	puppet resource user bob ensure=present groups=sysadmins
 	
-	puppet config print
+	puppet config print modulepath
 	
 	puppet config print | grep modulepath
 	
+
+	[root@puppet /] cd /etc/puppetlabs/code/environments/production/modules
+	[root@puppet modules] tree sysadmins
+		sysadmins
+		`-- manifests
+			`-- init.pp
+
+		1 directory, 1 file
+
+	puppet apply -e 'include sysadmins'
+
+
+
 	grep bob /etc/passwd
 	grep bob /etc/group
 	grep sysadmins /etc/group

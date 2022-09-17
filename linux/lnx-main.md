@@ -80,6 +80,46 @@ Shared Libraries: /lib, /usr/lib, /usr/local/lib
 - whoami
 - whereis sshd
 - chgrp wheel sales.data => Change group of a file 
+- whoami
+- cat /etc/passwd
+- head -1 /etc/passwd
+- clear
+- head -1 /etc/passwd
+- grep vagrant /etc/passwd
+- cat /etc/passwd
+- clear
+- cat /etc/group
+- clear
+- grep vagrant /etc/passwd
+- grep vagrant /etc/group
+- id vagrant
+- clear
+- useradd ansible
+- useradd jenkins
+- useradd aws
+- ls /etc/passwd
+- ls /etc/group
+- id ansible
+- groupadd devops
+- clear
+- usermod -aG devops ansible
+- id ansible
+- grep devops /etc/group
+- vim /etc/group
+- id aws
+- passwd ansible
+- passwd aws
+- passwd jenkins
+- su - ansible
+- last
+- who
+- yum install lsof -y
+- lsof -u vagrant
+- lsof -u aws
+- userdel aws
+- userdel -r jenkins
+- groupdel devops
+- userdel -r ansible
 
 
 # Linux System administration Commands : 
