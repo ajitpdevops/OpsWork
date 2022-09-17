@@ -1,3 +1,31 @@
+# Linux Principles 
+- Everything is a file (Including Hardware)
+- Small single purpose programs
+- Ability to chain these program together for complex operations
+- Avoid captive user interface
+- Configuration data is stored in a txt file 
+
+# Why Linux 
+- Opensource 
+- Community Support 
+- Supposrt wide hardwares 
+- Customization 
+- Most servers run on Linux 
+- Automation
+- Security 
+
+# Architecture of Linux 
+
+		End User layer
+--------------------------------
+		SHELL 
+--------------------------------
+		KERNEL
+--------------------------------
+    	HARDWARE
+
+# 
+
 # Linux Directory Structure 
 
 					    / 	(ROOT)	
@@ -36,13 +64,24 @@ Server Data: /var, /srv
 System Information: /proc, /sys 
 Shared Libraries: /lib, /usr/lib, /usr/local/lib
 
+=================================================
+File Types 
+- Regular FIle		touch		Any dir	–	PNG Image data, ASCII Text, RAR archive data, etc
+- Directory File	mkdir		Dir	 	d	Directory
+- Block Files		fdisk		/dev	b	Block special
+- Character Files	mknod		/dev	c	Character special
+- Pipe Files		mkfifo		/dev	p	FIFO
+- Symbol Link Files	ln			/dev	l	Symbol link to <linkname>
+- Socket Files		socket() system call	/dev	s	Socket
+
 
 ## Commands
-- ls 
+- ls [ls -ltr /etc/]
 - cd 
 - pwd 
-- cat 
+- cat 	E.g. cat /etc/os-release 
 - echo 
+- touch [touch devopsfile{1..10}.txt]
 - man [man -k calendar or man -k *calendar*]
 - exit 
 - cp : copy files 
@@ -121,9 +160,41 @@ Shared Libraries: /lib, /usr/lib, /usr/local/lib
 - groupdel devops
 - userdel -r ansible
 
+# Filters and Redirections
+- grep Block lnx-main.md
+- grep -i CURL *
+- grep -iR CURL *
+- sudo grep -R SELINUX /etc/* 
+- grep -v Block lnx-main.md [Reverse search]
+- grep -vi firewall anaconda-ks.cfg
+- less anaconda-ks.cfg
+- more anaconda-ks.cfg
+- head -20 anaconda-ks.cfg
+- tail -2 anaconda-ks.cfg
+- tail -f /tmp/glances-root.log 
+- cut -d: -f1 /etc/passwd
+- awk -F':' '{print $1}' /etc/passwd
+
+## Find an replace 
+- :%s/coronavirus/covid19/g [in /tmp/samplefile.txt find a word 'coronavirus' and replace it with 'covid19' globally.]
+- sed 's/coronavirus/covid19/g' /tmp/samplefile.txt [To print/view the changes]
+- sed -i 's/coronavirus/covid19/g' /tmp/samplefile.txt [-i To make the changes]
+
+## I/O Redirection
+- uptime > /tmp/sysinfo.txt
+- uptime >> /tmp/sysinfo.txt
+- uptime > /dev/null [output is not generated]
+- cat /dev/null > /tmp/sysinfo.txt
+- freeeee -m 2>> /tmp/error.log
+- free -m 1>> /tmp//error.log
+- freesdsd -m &>> /tmp//error.log
+- wc -l /etc/passwd
+- ls /etc/ | grep host
+- ls /bin | wc -l
+- free -m | grep -i mem 
+- sudo find /etc/ -name host*
 
 # Linux System administration Commands : 
-
 ### How to check the kernel version of a Linux system?
 - uname -a [Everything about Kernel and OS ]
   Linux cryptomach 5.11.0-40-generic #44~20.04.2-Ubuntu SMP Tue Oct 26 18:07:44 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
@@ -182,6 +253,12 @@ Shared Libraries: /lib, /usr/lib, /usr/local/lib
 - find . -exec file {} \;
 - find /lib/modules/$(uname -r) -type f -iname "*.ko"
 
+### How to Install a from a package file 
+- Debian based 
+	dpkg -i google.chrome.*.deb
+- RPM based 
+	rpm -ivh google.chrome.*.rpm
+
 ## Hardware devices 
 - lspci 
 - lspci -vvxxx [v -verbose, x - hexadecimal dump ] misbahiving devices 
@@ -193,6 +270,12 @@ Shared Libraries: /lib, /usr/lib, /usr/local/lib
 - sudo amazon-linux-extras install epel -y 
 - sudo yum install stress -y
 - stress -c 4 
+
+# How to curl?
+curl https://google.com
+curl -v https://google.com
+curl -I http://www.example.org
+curl -o hello.zip ftp://speedtest.tele2.net/1MB.zip
 
 ### glossary 
 Remote Repo 

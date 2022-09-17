@@ -1,3 +1,10 @@
+# Linux for DevOps -> 
+01 Commands [Syntax, help & other Commands]
+02 Files [Understanding, editing, filtering & security]
+03 Softwares [Management]
+04 Server [Management]
+
+# Linux Administrator -> 
 Chapter 1. Course Introduction
 Chapter 2. Linux Filesystem Tree Layout
 Chapter 3. Processes
