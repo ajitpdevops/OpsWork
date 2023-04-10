@@ -5,29 +5,29 @@
 ### Git Basics:
 
 | Command 				| Description |
-| --- 					| --- | 
-|git init <directory> 	| Create empty Git repo in specified directory. Run with no arguments to initialize the current directory as a git repository.|
-|git clone <repo> 		| Clone repo located at <repo> onto local machine. Original repo can be located on the local filesystem or on a remote machine via HTTP or SSH|
-|git status 			| List which files are staged, unstaged, and untracked|
-|git log 				| Display the entire commit history using the default format. For customization see additional options|
-|git diff 				| Show unstaged changes between your index and working director|
-|git config --global user.name <name>					|set a name that is identifiable for credit when review version history|
-|git config --global user.email <email>					|set an email address that will be associated with each history marker|
-|git config --global alias. <alias-name> <git-command> 	| create an alias for a command E.g. alias.glog For “log --graph --oneline”|
-|git revert <commit> 				| Create new commit that undoes all of the changes made in <commit>, then apply it to the current branch|		
-|git reset <file>					| Remove <file> from the staging area, but leave the working directory unchanged. This unstages a file without overwriting any changes|
+| --- 					| --- |
+|git init <directory> 	| Create empty Git repo in specified directory. Run with no arguments to initialize the current directory as a git repository |
+|git clone <repo> 		| Clone repo located at <repo> onto local machine. Original repo can be located on the local filesystem or on a remote machine via HTTP or SSH |
+|git status 			| List which files are staged, unstaged, and untracked |
+|git log 				| Display the entire commit history using the default format. For customization see additional options |
+|git diff 				| Show unstaged changes between your index and working director |
+|git config --global user.name <name>					|Set a name that is identifiable for credit when review version history |
+|git config --global user.email <email>					|Set an email address that will be associated with each history marker |
+|git config --global alias. <alias-name> <git-command> 	|Create an alias for a command E.g. alias.glog For “log --graph --oneline” |
+|git revert <commit> 				| Create new commit that undoes all of the changes made in <commit>, then apply it to the current branch |
+|git reset <file>					| Remove <file> from the staging area, but leave the working directory unchanged. This unstages a file without overwriting any changes |
 |git reset --hard <commit>			| Reset the staging area and working directory to match the version stored in <commit>|
-|git --version  					| [checks the version of the installed locally ]|
-|git config --global user.name "Your Name" 					| [Sets up the name of the user ]|
-|git config --global user.email "yourname@somemail.eu" 		| | 
-|git config --list 					| [lists all the git configurations]|
-|git config --global --list			|  [lists all the git configurations]|
-|git config --global color.ui true 	| [enables the color in the git]|
-|git help <verb> 					| (e.g. git help config) OR |
+|git --version  					| Checks the version of the installed locally |
+|git config --global user.name "Your Name" 					| Sets up the name of the user|
+|git config --global user.email "yourname@somemail.eu" 		| |
+|git config --list 					| lists all the git configurations |
+|git config --global --list			| lists all the git configurations |
+|git config --global color.ui true 	| enables the color in the git |
+|git help <verb> 					| e.g. git help config OR |
 |git <verb> --help 					| |
-|git init . 						| [initializes the git repo in the current folder]|
-|touch .gitignore 					|  [creates a git ignore file]|
-|git status  						| [check working tree - both on the git and on local]|
+|git init . 						| initializes the git repo in the current folder |
+|touch .gitignore 					| creates a git ignore file |
+|git status  						| check working tree - both on the git and on local |
 
 ### Add files:
 - git add -A [adds all of the files for commiting]
