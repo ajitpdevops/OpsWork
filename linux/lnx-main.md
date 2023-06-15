@@ -25,9 +25,6 @@
 --------------------------------
     	  HARDWARE
 ```	  
-
-# 
-
 # Linux Directory Structure 
 ```
 
@@ -54,20 +51,20 @@
 		/media	to mount removable disks 
 		/sbin 
 		/selinux 
-```
-================================================
-Home Directories: /root, /home/username 
-User Executables: /bin, /usr/bin, /usr/local/bin
-System Executables: /sbin, /usr/sbin, /usr/local/sbin 
-Other Mountpoints: /media, /mnt
-Configurations: /etc 
-Temp Files: /tmp 
-Kernels and Bootloader: /boot 
-Server Data: /var, /srv 
-System Information: /proc, /sys 
-Shared Libraries: /lib, /usr/lib, /usr/local/lib
 
-=================================================
+
+	Home Directories: /root, /home/username 
+	User Executables: /bin, /usr/bin, /usr/local/bin
+	System Executables: /sbin, /usr/sbin, /usr/local/sbin 
+	Other Mountpoints: /media, /mnt
+	Configurations: /etc 
+	Temp Files: /tmp 
+	Kernels and Bootloader: /boot 
+	Server Data: /var, /srv 
+	System Information: /proc, /sys 
+	Shared Libraries: /lib, /usr/lib, /usr/local/lib
+```
+
 File Types 
 - Regular FIle		touch		Any dir	–	PNG Image data, ASCII Text, RAR archive data, etc
 - Directory File	mkdir		Dir	 	d	Directory
