@@ -27,31 +27,32 @@
 # 
 
 # Linux Directory Structure 
+```
 
-					    / 	(ROOT)	
-                            |
-home 	etc 	var 	usr 	bin 	dev 	sys     tmp     proc    root    sbin
-  |	  	|	  	|   	|    	|   	|   	|       |       |       |       |
+					     / (ROOT)	
+				    		|
+	home 	etc 	var 	usr 	bin 	dev 	sys     tmp     proc    root    sbin
+	  |	  	|	  	|   	|    	|   	|   	|       |       |       |       |
 
-  
-	/ 		"Root"
-	/bin 	Binaries and other executable programs 
-	/etc 	System configuration files 
-	/home 	Home (User) directories
-	/opt 	Optional or third party software
-	/tmp 	Temp space, typically cleared on reboot 
-	/usr	User related programs 
-	/mnt 	Used to mount external file systems 
-	/var 	Variable data, mostly log files 
-	/srv	Contains data which is served by the system E.g. /srv/www or /srv/ftp 
-	/sys	Used to display and sometimes configure the devices know to the Linux Kernel
-	/export 	Shared file system 
-	/lib 	System libraries 
-	/lib64 	System libraries 64 bit 
-	/media	to mount removable disks 
-	/sbin 
-	/selinux 
 
+		/ 		"Root"
+		/bin 	Binaries and other executable programs 
+		/etc 	System configuration files 
+		/home 	Home (User) directories
+		/opt 	Optional or third party software
+		/tmp 	Temp space, typically cleared on reboot 
+		/usr	User related programs 
+		/mnt 	Used to mount external file systems 
+		/var 	Variable data, mostly log files 
+		/srv	Contains data which is served by the system E.g. /srv/www or /srv/ftp 
+		/sys	Used to display and sometimes configure the devices know to the Linux Kernel
+		/export 	Shared file system 
+		/lib 	System libraries 
+		/lib64 	System libraries 64 bit 
+		/media	to mount removable disks 
+		/sbin 
+		/selinux 
+```
 ================================================
 Home Directories: /root, /home/username 
 User Executables: /bin, /usr/bin, /usr/local/bin
