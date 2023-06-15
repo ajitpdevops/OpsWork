@@ -7,8 +7,10 @@ sudo yum -y install docker
 2. Enter the command below to start Docker as a service:
 sudo systemctl start docker
  
+3. Add current user to the gocker Group
+sudo usermod -aG docker $USER
 
-3. Verify Docker is running by entering:
+4. Verify Docker is running by entering:
 sudo docker info
 
 1. To see a list of the commands in Docker, simply enter:
