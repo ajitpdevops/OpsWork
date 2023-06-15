@@ -16,13 +16,15 @@
 
 # Architecture of Linux 
 
-		End User layer
+```
+	End User layer
 --------------------------------
-		SHELL 
+	   SHELL 
 --------------------------------
-		KERNEL
+	   KERNEL
 --------------------------------
-    	HARDWARE
+    	  HARDWARE
+```	  
 
 # 
 
