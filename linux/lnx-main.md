@@ -273,17 +273,17 @@ File Types
 - stress -c 4 
 
 # How to curl?
-curl https://google.com
-curl -v https://google.com
-curl -I http://www.example.org
-curl -o hello.zip ftp://speedtest.tele2.net/1MB.zip
+- curl https://google.com
+- curl -v https://google.com
+- curl -I http://www.example.org
+- curl -o hello.zip ftp://speedtest.tele2.net/1MB.zip
 
 ### glossary 
-Remote Repo 
-Clone 
-Local Repo 
-Staging Area 
-Pull / Push 
-Add / Commit 
-Work area 
-HEAD will always point to the latest commit 
+- Remote Repo 
+- Clone 
+- Local Repo 
+- Staging Area 
+- Pull / Push 
+- Add / Commit 
+- Work area 
+- HEAD will always point to the latest commit 
