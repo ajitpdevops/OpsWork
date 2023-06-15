@@ -167,6 +167,7 @@ File Types
 - sudo grep -R SELINUX /etc/* 
 - grep -v Block lnx-main.md [Reverse search]
 - grep -vi firewall anaconda-ks.cfg
+- grep -rnw /path/to/somewhere' -e 'pattern' 
 - less anaconda-ks.cfg
 - more anaconda-ks.cfg
 - head -20 anaconda-ks.cfg
